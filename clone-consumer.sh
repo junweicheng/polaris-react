@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+pwd
 cd ../
+pwd
 ls
 mkdir test
 ls
