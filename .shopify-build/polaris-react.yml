@@ -1,0 +1,16 @@
+containers:
+  default:
+    docker: circleci/ruby:2.5.1-node-browsers
+
+shared:
+  clone: &clone
+    label: 'Git Clone'
+    container: default
+    timeout: 5m
+    dependencies:
+      - yarn
+    run:
+      - ./clone-consumer.sh
+
+steps:
+  - <<: *clone
