@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 pwd
-cd ../
+mkdir clone-web
+cd clone-web
 pwd
 ls
 mkdir test
