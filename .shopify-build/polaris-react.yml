@@ -3,6 +3,14 @@ containers:
     docker: gcr.io/shopify-docker-images/apps/production/web-platform-ci-node:10.11.0-yarn-1.12.3
 
 shared:
+  build: build&
+    label: 'Build'
+    container: default
+    timeout: 5m
+    dependencies:
+      - yarn
+    run:
+      - yarn run build
   clone: &clone
     label: 'Git Clone'
     container: default
