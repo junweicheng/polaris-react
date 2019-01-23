@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-cd ../
+mkdir ../tmp/polaris-react
+mv * ../tmp/polaris-react
+mv ../tmp/polaris-react polaris-react
 ls -l
-ls -l  tmp
+ls -l polaris-react
