@@ -2,7 +2,7 @@ containers:
   default:
     docker: gcr.io/shopify-docker-images/apps/production/web-platform-ci-node:10.11.0-yarn-1.12.3
   styleguide:
-    docker: gcr.io/shopify-docker-images/apps/ci/polaris-styleguide:latest
+    docker: circleci/node:10.13.0
 
 shared:
   build-web: &build-web
