@@ -6,7 +6,7 @@ shared:
   clone: &clone
     label: 'Git Clone'
     container: default
-    timeout: 5m
+    timeout: 15m
     dependencies:
       - yarn
     run:
