@@ -11,12 +11,33 @@ shared:
       - yarn
     run:
       - yarn run build
-  clone: &clone
-    label: 'Git Clone'
+  move: &move
+    label: 'move'
     container: default
-    timeout: 15m
+    timeout: 5m
     run:
       - ./move-directory-in-ci.sh
+  build-web: &build-web
+    label: 'Build web'
+    container: default
+    timeout: 15m
+    dependencies:
+      - yarn
+    run:
+      - ./build-consumer.sh web
+  build-styleguide: &build-styleguide
+    label: 'Build styleguide'
+    container: default
+    timeout: 15m
+    dependencies:
+      - yarn
+    run:
+      - ./build-consumer.sh styleguide
 
 steps:
-  - <<: *clone
+  - <<: *build
+  - wait
+  - <<: *move
+  - wait
+  - <<: *build-styleguide
+  - <<: *build-web

@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-mkdir git-clones
-cd git-clones
 git clone ssh://git@github.com/Shopify/$1
-cd ../
-yarn run build-consumer
+cd $1
 yarn
+yarn add file:../polaris-react
 yarn run build
