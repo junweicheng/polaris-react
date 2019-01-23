@@ -2,3 +2,4 @@
 
 cd ../
 ls -l
+ls -l  tmp
