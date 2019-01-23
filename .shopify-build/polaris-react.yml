@@ -3,7 +3,7 @@ containers:
     docker: gcr.io/shopify-docker-images/apps/production/web-platform-ci-node:10.11.0-yarn-1.12.3
 
 shared:
-  build: build&
+  build: &build
     label: 'Build'
     container: default
     timeout: 5m
@@ -21,4 +21,5 @@ shared:
       - ./clone-consumer.sh
 
 steps:
+  - <<: *build
   - <<: *clone
