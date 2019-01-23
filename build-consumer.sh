@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ls -l
+ls -l ../
 echo "CLONING"
 git clone ssh://git@github.com/Shopify/$1
 echo "CDing"
