@@ -4,7 +4,7 @@ echo "CLONING"
 git clone ssh://git@github.com/Shopify/$1
 echo "CDing"
 cd $1
-ls -l ..
+ls -l
 echo "YARNing"
 yarn
 echo "ADDing"
