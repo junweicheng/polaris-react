@@ -35,8 +35,6 @@ shared:
       - ./build-consumer.sh styleguide
 
 steps:
-  - <<: *build
-  - wait
   - <<: *move
   - wait
   - <<: *build-styleguide
