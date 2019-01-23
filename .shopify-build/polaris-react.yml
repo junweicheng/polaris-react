@@ -22,4 +22,5 @@ shared:
 
 steps:
   - <<: *build
+  - wait
   - <<: *clone
