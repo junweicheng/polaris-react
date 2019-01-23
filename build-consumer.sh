@@ -14,3 +14,5 @@ echo "ADDing"
 yarn add file:../polaris-react
 echo "BUILDING"
 yarn run build
+yarn run build:production
+

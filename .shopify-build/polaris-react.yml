@@ -1,6 +1,8 @@
 containers:
   default:
     docker: gcr.io/shopify-docker-images/apps/production/web-platform-ci-node:10.11.0-yarn-1.12.3
+  styleguide:
+    docker: gcr.io/shopify-docker-images/apps/production/web-platform-ci-node:10.13.0-yarn-1.12.3
 
 shared:
   build: &build
@@ -24,7 +26,7 @@ shared:
       - ./polaris-react/build-consumer.sh web
   build-styleguide: &build-styleguide
     label: 'Build styleguide'
-    container: default
+    container: styleguide
     timeout: 15m
     dependencies:
       - yarn
