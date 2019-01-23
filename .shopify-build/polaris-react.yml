@@ -11,12 +11,6 @@ shared:
       - yarn
     run:
       - yarn run build
-  move: &move
-    label: 'move'
-    container: default
-    timeout: 5m
-    run:
-      - ./move-directory-in-ci.sh
   build-web: &build-web
     label: 'Build web'
     container: default
@@ -24,6 +18,7 @@ shared:
     dependencies:
       - yarn
     run:
+      - ./move-directory-in-ci.sh
       - ./build-consumer.sh web
   build-styleguide: &build-styleguide
     label: 'Build styleguide'
@@ -32,10 +27,11 @@ shared:
     dependencies:
       - yarn
     run:
-      - ./build-consumer.sh styleguide
+      - ./move-directory-in-ci.sh
+      - ./build-consumer.sh polaris-styleguide
 
 steps:
-  - <<: *move
+  - <<: *build
   - wait
   - <<: *build-styleguide
   - <<: *build-web

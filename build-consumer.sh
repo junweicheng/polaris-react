@@ -2,6 +2,7 @@
 
 ls -l
 ls -l ../
+pwd
 echo "CLONING"
 git clone ssh://git@github.com/Shopify/$1
 echo "CDing"
