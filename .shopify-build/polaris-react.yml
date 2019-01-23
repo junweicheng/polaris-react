@@ -1,6 +1,6 @@
 containers:
   default:
-    docker: circleci/ruby:2.5.1-node-browsers
+    docker: gcr.io/shopify-docker-images/apps/production/web-platform-ci-node:10.11.0-yarn-1.12.3
 
 shared:
   clone: &clone
