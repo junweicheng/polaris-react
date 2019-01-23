@@ -19,6 +19,8 @@ shared:
       - yarn
     run:
       - ./move-directory-in-ci.sh
+      - pwd
+      - ls -l
       - .polaris-react/build-consumer.sh web
   build-styleguide: &build-styleguide
     label: 'Build styleguide'
@@ -28,6 +30,8 @@ shared:
       - yarn
     run:
       - ./move-directory-in-ci.sh
+      - pwd
+      - ls -l
       - .polaris-react/build-consumer.sh polaris-styleguide
 
 steps:
