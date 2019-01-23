@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-mkdir clone-web
-cd clone-web
-git clone ssh://git@github.com/Shopify/web
-cd web
+mkdir git-clones
+cd git-clones
+git clone ssh://git@github.com/Shopify/$1
+cd ../
+yarn run build-consumer
 yarn
 yarn run build

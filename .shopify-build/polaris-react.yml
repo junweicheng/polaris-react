@@ -10,7 +10,7 @@ shared:
     dependencies:
       - yarn
     run:
-      - yarn run build
+      - ./move-directory-in-ci.sh
   clone: &clone
     label: 'Git Clone'
     container: default
@@ -22,5 +22,3 @@ shared:
 
 steps:
   - <<: *build
-  - wait
-  - <<: *clone
