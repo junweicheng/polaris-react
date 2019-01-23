@@ -15,8 +15,6 @@ shared:
     label: 'Git Clone'
     container: default
     timeout: 15m
-    dependencies:
-      - yarn
     run:
       - ./move-directory-in-ci.sh
 
