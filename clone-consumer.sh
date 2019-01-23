@@ -5,4 +5,4 @@ cd clone-web
 git clone ssh://git@github.com/Shopify/web
 cd web
 yarn
-ls -la
+yarn run build
