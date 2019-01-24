@@ -18,7 +18,7 @@ shared:
   build-styleguide: &build-styleguide
     label: 'Build styleguide'
     container: styleguide
-    timeout: 20m
+    timeout: 25m
     dependencies:
       - yarn
     run:
